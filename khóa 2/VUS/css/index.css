@@ -59,7 +59,7 @@ h2{
 }
 /* crousel */
 .crousel{
-    background-image: url(/img/slider_1.png);
+    background-image: url(../img/slider_1.png);
     height: 500px;
     background-size: cover;
 }
