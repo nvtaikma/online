@@ -83,3 +83,34 @@
     background-color: transparent;
     color: #ff4f81;
 }
+
+/* carousel */
+#carouselCyber .carousel-caption{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#carouselCyber .carousel-caption h1{
+    font-size: 52px;
+
+}
+#carouselCyber .carousel-caption p{
+    letter-spacing: 4px;
+    line-height: 1.8rem;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+#carouselCyber .carousel-caption button{
+    padding: 11px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    letter-spacing: 2px;
+    font-size: 14px;
+
+}
+
+
+
