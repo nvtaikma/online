@@ -36,4 +36,71 @@ dataGlasses.map((item, index) =>{
 // console.log(glassesList.glist);
     divvglassesList.innerHTML = glassesList.renderGlasses();
 }
+// goi ham
 showListGlasse();
+const tryOnGlasses = (e) => {
+    // console.log(e);
+    let gId = e.target.getAttribute("data-id");
+    let gObject = {};
+    // value là một đói tượng kính trong danh sách kính
+    for (let value of glassesList.glist){
+        if (value.id == gId){
+            gObject = value;
+        }
+    }
+    // console.log(gObject);
+    showInfo(gObject);
+}
+window.tryOnGlasses = tryOnGlasses;
+
+const showInfo = (gObject) =>{
+    let divAvatar = getEle('avatar');
+    let divInfo = getEle('glassesInfo');
+
+    divAvatar.innerHTML =`
+        <img id="glasses" src="${gObject.virtualImg}">
+    `;
+    let status = "";
+    if (gObject.status){
+        status = "Stocking";
+    }else{
+        status = "sold out";
+    }
+    divInfo.innerHTML =`
+        <h5>${gObject.name} - ${gObject.brand} (${gObject.color}) </h5>
+        <p class="card-text">
+            <span class="btn btn-danger btn-sm mr-2">
+                ${gObject.price}
+            </span>
+            <span class="text-success">${status}</span>
+        </p>
+        <p class="card-text">
+        ${gObject.desc}
+        </p>
+    
+    `;
+    divInfo.style.display = 'block';
+}
+
+// before and after
+
+const removeGlasses = (isDislay) => {
+    let glasses = getEle('glasses');
+    if(glasses != null){
+        if (isDislay){
+            glasses.style.display = 'block';
+    
+        }else{
+            glasses.style.display = 'none';
+        }
+    }
+   
+}
+window.removeGlasses = removeGlasses;
+
+    
+
+
+
+
+
