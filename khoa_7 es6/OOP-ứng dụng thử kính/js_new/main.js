@@ -29,7 +29,7 @@ const showListGlasse = () =>{
 // duyệt mảng data
 dataGlasses.map((item, index) =>{
     let gl = new Glasses(item.id, item.src, item.virtualImg, item.brand, item.name, item.color, item.price, item.description);
-    // console.log(gl);
+    console.log("tss", gl);
     glassesList.addGlasses(gl);
 
 });

@@ -1,4 +1,4 @@
-/*
+
 const main = () => {
   const address = document.getElementById("txtAddress").value;
   getGeoCode(address)
@@ -40,7 +40,9 @@ const getWeather = (lat, lng) => {
     //dùng superagent call api của darksky, lấy thời tiết của địa chỉ người dùng nhập
     superagent
       .get(
-        `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/7bbecca28cbc31d7c6739e70baa64e46/${lat},${lng}`
+        // https://cors-anywhere.herokuapp.com/
+        `https://api.darksky.net/forecast/7bbecca28cbc31d7c6739e70baa64e46/${lat},${lng}`
+        // `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=4be778d2e609fef85bde2a7bc27891b3`
       )
       .end((err, res) => {
         if (err) {
@@ -52,11 +54,11 @@ const getWeather = (lat, lng) => {
       });
   });
 };
-*/
+
 //promise => pending, resolve, reject
 
 
-const main = () =>{
-  const address = document.getElementById("txtAddress").value;
+// const main = () =>{
+//   const address = document.getElementById("txtAddress").value;
   
-}
+// }
